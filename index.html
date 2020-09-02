@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Decision Goal</title>
+    <link rel="stylesheet" href="./style.css"/>
+    <style>
+        h1{
+            position: relative;
+            margin-top: 45px;
+        }
+    </style>
+    <script src="https://cdn.jsdelivr.net/npm/animejs@3.0.1/lib/anime.min.js"></script>
+</head>
+<body>
+
+    <script>
+        anime({
+  targets: 'div.box.red',
+  translateY:[
+  {value:200,duration:500},
+      {value:100,duration:500}
+  ]
+
+});
+function myMove() {
+ var elem=document.getElementById('box0')
+ var pos=0
+ const style = getComputedStyle(elem)
+ var id=setInterval(frame,10)
+ console.log(elem.getStyle('top'))
+ function frame() {
+
+     if (pos===350) {
+
+         clearInterval(id)
+
+     }
+     else{
+         pos++
+        elem.style.top=pos+'px'
+     }
+ }   
+}
+    </script>
+    <div class="container">
+        <div class="sub_container">
+
+            <div id="box00" class="box1 n0">1</div>
+            <div id="box01" class="box1 n1">5</div>
+            <div id="box02" class="box1 n2">3</div>
+            <div id="box03" class="box1 n3">2</div>
+        </div>
+    </div>
+    <button onclick="myMove()">Click</button>
+    <!-- <div class="box blue"></div>
+    <div class="box yellow"></div>
+    <div class="box green"></div> -->
+</body>
+</html>

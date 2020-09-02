@@ -1,0 +1,43 @@
+.container{
+    background-color: gray;
+    display: flex;
+    width: 600px;
+    height: 600px;
+    position: relative;
+    margin: 0 auto;
+}
+.container_item{
+    background-color: antiquewhite;
+    display: flex;
+    width: 400px;
+    height: 260px;
+    top: 340px;
+    position: relative;
+    margin: 0 auto;
+}
+.item{
+    opacity: 1;
+    display: flex;
+    cursor: pointer;
+    background-color:antiquewhite;
+    height: 200px;
+    width: 50px;
+    top: 100px;
+    padding: 30px;
+    color: white;
+    flex-direction: column-reverse;
+    margin-left: 10px;
+    margin: 0 auto;
+}
+.box{
+    opacity: 1;
+    cursor: pointer;
+    height: 50px;
+    width: 50px;
+    color:black;
+    text-align: center;
+    align-items: center;
+    line-height: 50px;
+    margin: 0 auto;
+    font-weight: bold;
+}
